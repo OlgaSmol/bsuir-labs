@@ -1,15 +1,19 @@
-markdown# BSUIR Laboratory Works: C++ Programming
+# Lab 1: Mathematical Formula Calculation in C++
 
-Welcome to my repository for programming assignments at the Belarusian State University of Informatics and Radioelectronics (BSUIR). This project tracks my academic progress, coding skills, and foundation in computer science as I prepare for a career in Cybersecurity.
+## 📝 Description
+My first laboratory work at BSUIR. The goal is to calculate a complex math equation using the C++ `<cmath>` library and precise `double` data types.
 
-## 📁 Repository Structure
-* **Lab 1:** Introduction to C++ structures, data types, and basic I/O operations.
+This project is the start of my coding portfolio for **Old Dominion University (ODU)** 🚀.
 
-## 🛠️ Tech Stack & Tools
-* **Language:** C++
-* **Target Destination:** Future Master's Degree at Old Dominion University (ODU) 🚀
+### 📐 Input & Expected Output
+* **Inputs:** \(x = 6.251\), \(y = 0.827\), \(z = 25.001\)
+* **Expected Result:** \(b = 0.7121\)
 
-## 📈 Learning Goals
-* Mastering strict data typing and memory management.
-* Moving from Python background to compiled high-performance languages.
-* Building a solid engineering portfolio from semester one.
+## 🛠️ Key C++ Functions Used
+* `fabs()` — absolute value for floating-point numbers.
+* `cbrt()` — cube root calculation.
+* `pow()` — power function for constants and trigonometry.
+* `exp()` — exponential function (\(e^x\)).
+
+## 📈 Python to C++ Transition
+As a student with a Python background, this lab helped me master strict data typing (`double`), semicolons `;`, and code blocks `{}`.
