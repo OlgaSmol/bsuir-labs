@@ -1,7 +1,42 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="lab1/lab1.vcxproj" Id="37b221c6-6f43-454a-8ce6-e8b318f878d8" />
-</Solution>
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+// Преобразование строки в число с поддержкой и запятой, и точки
+double toDouble(string s) {
+    replace(s.begin(), s.end(), ',', '.');
+    return stod(s);
+}
+
+int main()
+{
+    string sx, sy, sz;
+    double x, y, z, b;
+
+    cout << "Input x, y, z = ";
+    cin >> sx >> sy >> sz;
+
+    x = toDouble(sx);
+    y = toDouble(sy);
+    z = toDouble(sz);
+
+    // b = y^(кубический корень из |x|) + cos^3(y) *
+    //     ( |x-y| * (1 + sin^2(z)/sqrt(x+y)) ) / ( exp(|x-y|) + x/2 )
+    b = pow(y, pow(fabs(x), 1.0 / 3.0))
+        + pow(cos(y), 3)
+        * (fabs(x - y) * (1 + pow(sin(z), 2) / sqrt(x + y)))
+        / (exp(fabs(x - y)) + x / 2.0);
+
+    printf("\n x = %7.3lf\n y = %7.3lf\n z = %7.3lf\n Rezult = %.4lf\n",
+        x, y, z, b);
+
+    cout << "\nPress Enter ... ";
+    cin.ignore();
+    cin.get();
+    return 0;
+}
